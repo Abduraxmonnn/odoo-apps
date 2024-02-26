@@ -61,3 +61,4 @@ README.md
 SECURITY.md
 setup.cfg
 setup.py
+/venv
