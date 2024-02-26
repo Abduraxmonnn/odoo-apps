@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_course_group_form" model="ir.ui.view">
+        <field name="name">course.group.form</field>
+        <field name="model">course.group</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="teacher_ids"/>
+                        <field name="course_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_course_group_tree" model="ir.ui.view">
+        <field name="name">course.group.tree</field>
+        <field name="model">course.group</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" string="Group Name"/>
+                <field name="teacher_ids" string="Choose Teacher"/>
+                <field name="course_ids" string="Choose Course"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_course_group" model="ir.actions.act_window">
+        <field name="name">Courses Group</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">course.group</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_course_group_tree"/>
+    </record>
+
+    <menuitem id="menu_course_group_operations"
+              name="Course Group Operations"
+              parent="menu_course_operations"
+              action="action_course_group"
+              sequence="0"/>
+
+</odoo>
