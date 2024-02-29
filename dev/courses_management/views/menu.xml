@@ -7,4 +7,5 @@
     <menuitem id="menu_course_group_operations" name="Course Group Operations" parent="menu_course_root" />
     <menuitem id="menu_course_teacher_operations" name="Course Teacher Operations" parent="menu_course_root" />
     <menuitem id="menu_course_student_operations" name="Course Student Operations" parent="menu_course_root" />
+    <menuitem id="menu_course_payment_operations" name="Course Payment Operations" parent="menu_course_root" />
 </odoo>

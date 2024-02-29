@@ -9,7 +9,7 @@
                 <sheet>
                     <group>
                         <field name="full_name" string="Full name (F.I.O)"/>
-                        <field name="age" string="Age" />
+                        <field name="birth_date" string="Birth date" />
                         <field name="gender" string="Gender"/>
                     </group>
                 </sheet>

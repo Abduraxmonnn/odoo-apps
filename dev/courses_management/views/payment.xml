@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_payment_form" model="ir.ui.view">
+        <field name="name">course.payment.form</field>
+        <field name="model">course.payment</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="check_file" string="Check"/>
+                        <field name="price" string="Price"/>
+                        <field name="notes" string="Notes"/>
+                        <field name="payer" string="Payer"/>
+                        <field name="created_date" string="Payment Date"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_payment_tree" model="ir.ui.view">
+        <field name="name">course.payment.tree</field>
+        <field name="model">course.payment</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="check_file" string="Check"/>
+                <field name="price" string="Price"/>
+                <field name="notes" string="Notes"/>
+                <field name="payer" string="Payer"/>
+                <field name="created_date" string="Payment Date"/>
+            </tree>
+            <filter name="last_week_payments" string="Last Week">
+                <domain>[('create_date', '&gt;=', context.get('last_week_start')),
+                    ('create_date', '&lt;=', context.get('last_week_end'))]
+                </domain>
+            </filter>
+        </field>
+    </record>
+
+    <record id="action_payment" model="ir.actions.act_window">
+        <field name="name">Payment</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">course.payment</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_payment_tree"/>
+    </record>
+
+    <menuitem id="menu_payments"
+              name="Payments"
+              parent="menu_course_payment_operations"
+              action="action_payment"
+              sequence="0"/>
+
+</odoo>

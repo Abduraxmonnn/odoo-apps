@@ -3,3 +3,4 @@ courses_management.access_course,access_course,courses_management.model_course,b
 courses_management.access_course_group,access_course_group,courses_management.model_course_group,base.group_user,1,1,1,1
 courses_management.access_course_teacher,access_course_teacher,courses_management.model_course_teacher,base.group_user,1,1,1,1
 courses_management.access_course_student,access_course_student,courses_management.model_course_student,base.group_user,1,1,1,1
+courses_management.access_course_payment,access_course_payment,courses_management.model_course_payment,base.group_user,1,1,1,1

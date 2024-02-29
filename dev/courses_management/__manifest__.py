@@ -11,5 +11,7 @@
         "views/course_group.xml",
         "views/teacher.xml",
         "views/student.xml",
+        "views/payment.xml",
+        "views/last_week_payment.xml",
     ]
 }
