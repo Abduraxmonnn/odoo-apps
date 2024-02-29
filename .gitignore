@@ -54,8 +54,8 @@ __pycache__
 *.log
 config.py
 .gitattributes
-custom/addons/*/init.py
-custom/addons/*/*.html
+/addons/*/init.py
+/addons/*/*.html
 web/static/lib/*
 web/static/src/scss/*
 /venv
