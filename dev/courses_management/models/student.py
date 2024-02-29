@@ -16,6 +16,7 @@ class CourseStudent(models.Model):
     gender = fields.Selection([('male', 'Male'), ('female', 'Female')], string='Gender')
 
     course_groups_ids = fields.Many2many(comodel_name='course.group', string='Course Groups')
+    payment_ids = fields.One2many('course.payment', 'student_id', string='Payments')
 
     @api.depends('birth_date')
     def _compute_age(self):

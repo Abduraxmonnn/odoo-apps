@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="view_payment_last_week_tree" model="ir.ui.view">
-        <field name="name">course.payment.tree</field>
+    <record id="view_last_week_payment_tree" model="ir.ui.view">
+        <field name="name">course.payment.last_week.tree</field>
         <field name="model">course.payment</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="check_file" string="Check"/>
                 <field name="price" string="Price"/>
-                <field name="notes" string="Notes"/>
-                <field name="payer" string="Payer"/>
-                <field name="created_date" string="Payment Date"/>
+                <field name="notes" string="Description"/>
+                <field name="created_date" string="Created Date"/>
             </tree>
-            <filter name="last_week_payments" string="Last Week"
-                    domain="[('create_date', '&gt;=', default_last_week_start),
-                             ('create_date', '&lt;=', default_last_week_end)]"/>
         </field>
     </record>
 
@@ -21,8 +17,10 @@
         <field name="name">Last Week Payments</field>
         <field name="res_model">course.payment</field>
         <field name="view_mode">tree</field>
-        <field name="view_id" ref="view_payment_last_week_tree"/>
-        <field name="context">{'search_default_last_week_payments': 1}</field>
+        <field name="view_id" ref="view_last_week_payment_tree"/>
+        <field name="domain">[('created_date', '&gt;=', context.get('last_week_dates')[0]),
+                              ('created_date', '&lt;=', context.get('last_week_dates')[1])]</field>
+        <field name="context">{'last_week_dates': get_last_week_context()}</field>
     </record>
 
     <menuitem id="menu_last_week_payments"
@@ -30,5 +28,4 @@
               parent="menu_course_payment_operations"
               action="action_last_week_payments"
               sequence="20"/>
-
 </odoo>

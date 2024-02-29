@@ -11,7 +11,7 @@
                         <field name="check_file" string="Check"/>
                         <field name="price" string="Price"/>
                         <field name="notes" string="Notes"/>
-                        <field name="payer" string="Payer"/>
+                        <field name="student_id" string="Payer"/>
                         <field name="created_date" string="Payment Date"/>
                     </group>
                 </sheet>
@@ -27,7 +27,7 @@
                 <field name="check_file" string="Check"/>
                 <field name="price" string="Price"/>
                 <field name="notes" string="Notes"/>
-                <field name="payer" string="Payer"/>
+                <field name="student_id" string="Payer"/>
                 <field name="created_date" string="Payment Date"/>
             </tree>
             <filter name="last_week_payments" string="Last Week">

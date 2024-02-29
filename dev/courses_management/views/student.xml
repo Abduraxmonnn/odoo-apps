@@ -7,15 +7,31 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
-                    <group>
-                        <field name="full_name" string="Full name (F.I.O)"/>
-                        <field name="birth_date" string="Birth date" />
-                        <field name="gender" string="Gender"/>
-                    </group>
+                    <notebook>
+                        <page string="Personal Information">
+                            <group>
+                                <field name="full_name" string="Full name (F.I.O)"/>
+                                <field name="birth_date" string="Birth date"/>
+                                <field name="gender" string="Gender"/>
+                            </group>
+                        </page>
+
+                        <page string="Payments">
+                            <field name="payment_ids" widget="one2many_list">
+                                <tree>
+                                    <field name="check_file" string="File of Check"/>
+                                    <field name="price" string="Price"/>
+                                    <field name="notes" string="Description"/>
+                                    <field name="created_date" string="Created Date"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
     </record>
+
 
     <record id="view_student_tree" model="ir.ui.view">
         <field name="name">course.student.tree</field>
