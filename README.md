@@ -36,6 +36,9 @@ the <a href="https://www.odoo.com/page/scale-up-business-game">business game</a>
 with <a href="https://www.odoo.com/documentation/16.0/developer/howtos.html">the developer tutorials</a>
 
 # Set-up
+
+Project name is courses management
+
 ## Note
 
 If you are Odoo developer set up my mini-project will not be problem for you )))
