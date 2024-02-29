@@ -18,7 +18,6 @@
         </field>
     </record>
 
-
     <record id="view_course_tree" model="ir.ui.view">
         <field name="name">course.tree</field>
         <field name="model">course</field>

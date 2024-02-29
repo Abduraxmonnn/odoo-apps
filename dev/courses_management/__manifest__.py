@@ -9,7 +9,7 @@
         "views/menu.xml",
         "views/course.xml",
         "views/course_group.xml",
-        # "views/teacher.xml"
-        # "views/student.xml"
+        "views/teacher.xml",
+        "views/student.xml",
     ]
 }

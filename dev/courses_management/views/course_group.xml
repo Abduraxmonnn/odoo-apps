@@ -17,6 +17,16 @@
         </field>
     </record>
 
+    <record id="course_group_get_associated_courses" model="ir.actions.server">
+        <field name="name">Get Associated Courses</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_course_group"/>
+        <field name="code">def get_associated_courses(self):
+            record = self.env['course.group'].browse(self.context.get('active_id'))
+            return record.course_ids
+        </field>
+    </record>
+
     <record id="view_course_group_tree" model="ir.ui.view">
         <field name="name">course.group.tree</field>
         <field name="model">course.group</field>
@@ -24,7 +34,11 @@
             <tree>
                 <field name="name" string="Group Name"/>
                 <field name="teacher_ids" string="Choose Teacher"/>
-                <field name="course_ids" string="Choose Course"/>
+                <!--                <field name="course_ids" string="Choose Course"/>-->
+                <field name="course_ids" string="Choose Course">
+                    <button name="%(course_group_get_associated_courses.id)s" string="Show Associated Courses"
+                            type="action"/>
+                </field>
             </tree>
         </field>
     </record>
@@ -37,9 +51,9 @@
         <field name="view_id" ref="view_course_group_tree"/>
     </record>
 
-    <menuitem id="menu_course_group_operations"
-              name="Course Group Operations"
-              parent="menu_course_operations"
+    <menuitem id="menu_course_group"
+              name="Course Group"
+              parent="menu_course_group_operations"
               action="action_course_group"
               sequence="0"/>
 
