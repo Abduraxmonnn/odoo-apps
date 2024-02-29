@@ -47,3 +47,15 @@ package.json
 /man/
 /share/
 /src/
+
+*.pyc
+__pycache__
+.pytest_cache
+*.log
+config.py
+.gitattributes
+custom/addons/*/init.py
+custom/addons/*/*.html
+web/static/lib/*
+web/static/src/scss/*
+/venv
