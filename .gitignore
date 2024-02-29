@@ -59,3 +59,5 @@ config.py
 web/static/lib/*
 web/static/src/scss/*
 /venv
+/dev/om_hospital/
+/dev/school_management_old/

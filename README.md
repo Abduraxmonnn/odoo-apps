@@ -26,7 +26,67 @@ a full-featured <a href="https://www.odoo.com">Open Source ERP</a> when you inst
 Getting started with Odoo
 -------------------------
 
-For a standard installation please follow the <a href="https://www.odoo.com/documentation/16.0/administration/install/install.html">Setup instructions</a>
+For a standard installation please follow
+the <a href="https://www.odoo.com/documentation/16.0/administration/install/install.html">Setup instructions</a>
 from the documentation.
 
-To learn the software, we recommend the <a href="https://www.odoo.com/slides">Odoo eLearning</a>, or <a href="https://www.odoo.com/page/scale-up-business-game">Scale-up</a>, the <a href="https://www.odoo.com/page/scale-up-business-game">business game</a>. Developers can start with <a href="https://www.odoo.com/documentation/16.0/developer/howtos.html">the developer tutorials</a>
+To learn the software, we recommend the <a href="https://www.odoo.com/slides">Odoo eLearning</a>,
+or <a href="https://www.odoo.com/page/scale-up-business-game">Scale-up</a>,
+the <a href="https://www.odoo.com/page/scale-up-business-game">business game</a>. Developers can start
+with <a href="https://www.odoo.com/documentation/16.0/developer/howtos.html">the developer tutorials</a>
+
+# Set-up
+## Note
+
+If you are Odoo developer set up my mini-project will not be problem for you )))
+
+If you know Odoo developer then please ask him/her to set up my mini-project
+
+If you are NOT Odoo developer ((( there is a long and easy road ahead of us
+
+`GOOD LUCK`
+
+## Get project
+
+clone project to local machine
+
+```shell
+$ git clone https://gitlab.com/abduraxmon1/odoo-course.git
+$ cd odoo-course
+$ python3 -m venv venv
+```
+
+## Development
+
+Activate virtual environment in Linux machine
+
+```shell
+$ source .venv/bin/activate
+```
+
+Activate virtual environment in Windows machine
+
+```shell
+$ venv\Scripts\activate
+```
+
+Activate virtual environment in MacOS machine
+
+```shell
+$ source venv/bin/activate
+```
+
+Install dependencies
+
+```shell
+$ pip install -r requirements.txt
+```
+
+## Configurations of Python
+
+DO NOT forgot create database in PostgreSQL using odoo interface with database name `odoo16_3`, username `odoo16` and
+password `odoo`
+
+also SET this command in python run
+configuration `-c {PATH_TO}/debian/odoo.conf -d {database_name} -u {database_username}` and for
+script `{PATH_TO}/odoo-bin`
