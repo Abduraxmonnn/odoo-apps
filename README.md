@@ -37,7 +37,7 @@ with <a href="https://www.odoo.com/documentation/16.0/developer/howtos.html">the
 
 # Set-up
 
-Project name is courses management
+Project name is `courses management`
 
 ## Note
 
