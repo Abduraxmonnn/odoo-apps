@@ -41,11 +41,11 @@ Project name is courses management
 
 ## Note
 
-If you are Odoo developer set up my mini-project will not be problem for you )))
+* If you are Odoo developer set up my mini-project will not be problem for you )))
 
-If you know Odoo developer then please ask him/her to set up my mini-project
+* If you know Odoo developer then please ask him/her to set up my mini-project
 
-If you are NOT Odoo developer ((( there is a long and easy road ahead of us
+* If you are NOT Odoo developer ((( there is a long and easy road ahead of us
 
 `GOOD LUCK`
 
