@@ -18,9 +18,9 @@
         <field name="res_model">course.payment</field>
         <field name="view_mode">tree</field>
         <field name="view_id" ref="view_last_week_payment_tree"/>
+        <field name="context">{'last_week_dates': get_last_week_context()}</field>
         <field name="domain">[('created_date', '&gt;=', context.get('last_week_dates')[0]),
                               ('created_date', '&lt;=', context.get('last_week_dates')[1])]</field>
-        <field name="context">{'last_week_dates': get_last_week_context()}</field>
     </record>
 
     <menuitem id="menu_last_week_payments"
